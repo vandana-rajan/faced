@@ -99,7 +99,8 @@ def run_video(path, thresh, save):
         now = time.time()
         # Capture frame-by-frame
         ret, frame = cap.read()
-
+        if(ret==False):
+            continue
         if frame.shape[0] == 0:
             break
 
